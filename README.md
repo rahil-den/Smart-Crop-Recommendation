@@ -33,8 +33,8 @@ Smart-Crop-Recommendation/
 │ ├── train_pipeline.py
 │ └── pipeline.pkl
 │
-├── app/
-│ ├── app.py
+├── app.py
+│-|
 │ └── pages/
 │ ├── 1_📊_Model_Accuracy.py
 │ └── 2_📈_Data_Visualization.py
