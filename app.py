@@ -10,7 +10,7 @@ pipeline = joblib.load("model/pipeline.pkl")
 accuracy = 0.9572  # your accuracy
 
 # Load dataset
-df = pd.read_csv("data/crop_dataset.csv")
+df = pd.read_csv("data/Crop_dataset.csv")
 
 st.header("Crop Prediction")
 
