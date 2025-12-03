@@ -30,20 +30,29 @@ with col3:
     temperature = st.number_input("Temperature (°C)", 0.0, 50.0, 25.0)
 
 if st.button("Predict Crop"):
-    # Use EXACT lowercase feature names used during training
-    input_data = pd.DataFrame([{
-        "n": n,
-        "p": p,
-        "k": k,
-        "temperature": temperature,
-        "humidity": humidity,
-        "ph": ph,
-        "rainfall": rainfall
-    }])
 
-    # Predict
-    result = pipeline.predict(input_data)[0]
-    st.success(f"Recommended Crop: {result}")
+    # ======================
+    # VALIDATION ADDED HERE
+    # ======================
+    inputs = [n, p, k, temperature, humidity, ph, rainfall]
+
+    if all(value == 0 for value in inputs):
+        st.error("All fields cannot be 0. Please enter valid values.")
+    else:
+        # Prepare input correctly
+        input_data = pd.DataFrame([{
+            "n": n,
+            "p": p,
+            "k": k,
+            "temperature": temperature,
+            "humidity": humidity,
+            "ph": ph,
+            "rainfall": rainfall
+        }])
+
+        # Predict
+        result = pipeline.predict(input_data)[0]
+        st.success(f"Recommended Crop: {result}")
 
 st.write("---")
 st.info("Use the menu on the left to explore Model Accuracy and Data Visualizations.")
