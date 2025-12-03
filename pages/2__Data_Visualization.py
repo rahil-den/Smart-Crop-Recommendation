@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.title("Data Visualization")
 
-df = pd.read_csv("data/crop_dataset.csv")
+df = pd.read_csv("data/Crop_dataset.csv")
 
 
 # ----------------------------
