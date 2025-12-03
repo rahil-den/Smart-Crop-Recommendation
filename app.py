@@ -31,7 +31,7 @@ with col3:
 
 if st.button("Predict Crop"):
 
-    # Prepare input
+   
     input_data = pd.DataFrame([{
         "n": n,
         "p": p,
