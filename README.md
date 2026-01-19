@@ -44,5 +44,5 @@ Smart-Crop-Recommendation/
 └── README.md
 ```
 
-## Made with ❤️by Rahil 
+## Made with ❤️by Rahil & Talha
 
